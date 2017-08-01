@@ -9,6 +9,9 @@ FROM ubuntu:14.04
 #Maintainer and author
 MAINTAINER Magdalena Arnal <marnal@imim.es>
 
+#Update and install packages wget, unzip and python
+RUN apt-get update && apt-get install --yes wget unzip python
+
 #Set the working directory
 WORKDIR /bin
 
