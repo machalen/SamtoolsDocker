@@ -21,7 +21,7 @@ RUN wget http://github.com/samtools/samtools/releases/download/1.5/samtools-1.5.
 #Unbzip and untar the package
 RUN tar jxf samtools-1.5.tar.bz2
 RUN cd samtools-1.5
-RUN ./configure --prefix=/bin
+RUN ./configure
 RUN make
 
 ENV PATH $PATH:/bin/samtools-1.5
