@@ -11,8 +11,8 @@ MAINTAINER Magdalena Arnal <marnal@imim.es>
 
 #Update and install packages wget, unzip and python
 RUN apt-get update -y && apt-get install -y \
-wget git unzip bzip2 g++ make zlib1g-dev ncurses-dev python default-jdk default-jre libncurses5-dev \
-libbz2-dev liblzma-dev
+    wget git unzip bzip2 g++ make zlib1g-dev ncurses-dev python default-jdk default-jre libncurses5-dev \
+    libbz2-dev liblzma-dev
 
 ENV SAMTOOLS_INSTALL_DIR=/opt/samtools
 #Set the working directory
