@@ -13,7 +13,7 @@ MAINTAINER Magdalena Arnal <marnal@imim.es>
 RUN apt-get update && apt-get install --yes wget unzip python
 
 #Set the working directory
-WORKDIR /bin
+WORKDIR /home
 
 #Download Samtools from GitHub
 RUN wget http://github.com/samtools/samtools/releases/download/1.5/samtools-1.5.tar.bz2
@@ -24,4 +24,4 @@ RUN cd samtools-1.5
 RUN ./configure
 RUN make
 
-ENV PATH $PATH:/bin/samtools-1.5
+ENV PATH $PATH:/home/samtools-1.5
