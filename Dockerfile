@@ -29,4 +29,5 @@ RUN rm /bin/samtools-1.5.tar.bz2
 
 #Set WorkingDir and Add samtools to the path variable
 ENV PATH $PATH:/bin/samtools-1.5
+USER 1001:1001
 WORKDIR /
