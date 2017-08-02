@@ -10,7 +10,9 @@ FROM ubuntu:14.04
 MAINTAINER Magdalena Arnal <marnal@imim.es>
 
 #Update and install packages wget, unzip and python
-RUN apt-get update && apt-get install --yes wget unzip python
+RUN apt-get update && apt-get install --yes wget unzip bzip2 \
+make python libbz2-dev liblzma-dev \
+g++ zlib1g-dev
 
 #Set the working directory
 WORKDIR /bin
@@ -19,7 +21,7 @@ WORKDIR /bin
 RUN wget http://github.com/samtools/samtools/releases/download/1.5/samtools-1.5.tar.bz2
 
 #Unbzip and untar the package
-RUN tar jxf samtools-1.5.tar.bz2
+RUN tar --bzip2 -xf samtools-1.5.tar.bz2
 RUN rm samtools-1.5.tar.bz2
 WORKDIR /bin/samtools-1.5
 RUN ./configure
