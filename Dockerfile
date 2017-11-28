@@ -20,14 +20,15 @@ WORKDIR /bin
 #Download Samtools from GitHub
 RUN wget http://github.com/samtools/samtools/releases/download/1.5/samtools-1.5.tar.bz2
 
-#Unbzip and untar the package
+#Unbzip and untar package
 RUN tar --bzip2 -xf samtools-1.5.tar.bz2
 WORKDIR /bin/samtools-1.5
 RUN ./configure
 RUN make
 RUN rm /bin/samtools-1.5.tar.bz2
 
-#Set WorkingDir and Add samtools to the path variable
+#Add samtools to the path variable
 ENV PATH $PATH:/bin/samtools-1.5
-USER 1001:1001
+
+#Set WorkingDir
 WORKDIR /
