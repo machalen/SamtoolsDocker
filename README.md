@@ -1,7 +1,7 @@
 # SamtoolsDocker
-Dockerfile to install and use Samtools v1.5
+Dockerfile to install and use samtools v1.5
 
-- samtools-1.5.tar.bz2
+- samtools-1.5
 - ubuntu 14.04
 
 Based on: genomicpariscentre/tophat2
